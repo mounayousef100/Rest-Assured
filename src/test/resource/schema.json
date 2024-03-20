@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/ID"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "author": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "author",
+                "id",
+                "title"
+            ],
+            "title": "Welcome2Element"
+        },
+        "ID": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "ID"
+        }
+    }
+}
